@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="LRj-ox-ZcO">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Women Surrealists-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="Surrealists" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -15,11 +17,415 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B2N-sL-UHO">
+                                <rect key="frame" x="0.0" y="332" width="300" height="268"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <state key="normal" title="Leonora Carrington" backgroundImage="LeonoraCarrington1">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Y9O-cV-OUI" kind="show" id="e8d-sP-TCC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mit-0C-8X6">
+                                <rect key="frame" x="0.0" y="64" width="300" height="268"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <state key="normal" title="Remedios Varo" backgroundImage="RemediosVaro1">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="JIa-Kp-swM" kind="show" id="g7l-PI-9Uh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XNB-2E-w8R">
+                                <rect key="frame" x="300" y="64" width="300" height="268"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <state key="normal" title="Kay Sage" backgroundImage="KaySage1">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="t30-GY-YUo" kind="show" id="xfR-4U-2G6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dVo-yp-nPS">
+                                <rect key="frame" x="300" y="332" width="300" height="268"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <state key="normal" title="Frida Kahlo" backgroundImage="FridaKahlo1">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Qo1-tW-GxN" kind="show" id="o89-cO-ZaH"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="XNB-2E-w8R" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="4ah-TZ-XaK"/>
+                            <constraint firstItem="Mit-0C-8X6" firstAttribute="width" secondItem="XNB-2E-w8R" secondAttribute="width" id="5Fp-3O-TRn"/>
+                            <constraint firstItem="XNB-2E-w8R" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="6xg-jx-79Y"/>
+                            <constraint firstItem="B2N-sL-UHO" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="AXJ-t1-jle"/>
+                            <constraint firstItem="dVo-yp-nPS" firstAttribute="height" secondItem="XNB-2E-w8R" secondAttribute="height" id="CaM-GR-6kD"/>
+                            <constraint firstItem="dVo-yp-nPS" firstAttribute="width" secondItem="B2N-sL-UHO" secondAttribute="width" id="Dea-PU-0HE"/>
+                            <constraint firstAttribute="trailing" secondItem="XNB-2E-w8R" secondAttribute="trailing" id="EXK-bG-IgS"/>
+                            <constraint firstItem="dVo-yp-nPS" firstAttribute="height" secondItem="XNB-2E-w8R" secondAttribute="height" id="Fuz-Ea-N6C"/>
+                            <constraint firstItem="Mit-0C-8X6" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="GWK-BN-9kC"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="B2N-sL-UHO" secondAttribute="bottom" id="HVh-sF-HMs"/>
+                            <constraint firstItem="Mit-0C-8X6" firstAttribute="width" secondItem="XNB-2E-w8R" secondAttribute="width" id="KON-KH-oqx"/>
+                            <constraint firstItem="dVo-yp-nPS" firstAttribute="top" secondItem="XNB-2E-w8R" secondAttribute="bottom" id="L4x-ki-py7"/>
+                            <constraint firstItem="B2N-sL-UHO" firstAttribute="top" secondItem="Mit-0C-8X6" secondAttribute="bottom" id="M7S-Iy-zmg"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="dVo-yp-nPS" secondAttribute="bottom" id="Qry-Vd-cwV"/>
+                            <constraint firstItem="Mit-0C-8X6" firstAttribute="height" secondItem="B2N-sL-UHO" secondAttribute="height" id="SUT-na-HSP"/>
+                            <constraint firstItem="B2N-sL-UHO" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="T5f-1g-lK7"/>
+                            <constraint firstItem="Mit-0C-8X6" firstAttribute="height" secondItem="B2N-sL-UHO" secondAttribute="height" id="VSI-6a-tNt"/>
+                            <constraint firstItem="XNB-2E-w8R" firstAttribute="leading" secondItem="Mit-0C-8X6" secondAttribute="trailing" id="XEo-de-OFV"/>
+                            <constraint firstItem="dVo-yp-nPS" firstAttribute="leading" secondItem="B2N-sL-UHO" secondAttribute="trailing" id="Z7M-rL-dhQ"/>
+                            <constraint firstItem="Mit-0C-8X6" firstAttribute="width" secondItem="XNB-2E-w8R" secondAttribute="width" id="Z8i-xa-BJp"/>
+                            <constraint firstAttribute="trailing" secondItem="XNB-2E-w8R" secondAttribute="trailing" id="ZVR-Fe-Fhj"/>
+                            <constraint firstItem="dVo-yp-nPS" firstAttribute="top" secondItem="XNB-2E-w8R" secondAttribute="bottom" id="Zis-h0-i69"/>
+                            <constraint firstItem="dVo-yp-nPS" firstAttribute="leading" secondItem="B2N-sL-UHO" secondAttribute="trailing" id="ZnR-70-nHE"/>
+                            <constraint firstItem="B2N-sL-UHO" firstAttribute="top" secondItem="Mit-0C-8X6" secondAttribute="bottom" id="chG-Pz-5hw"/>
+                            <constraint firstItem="XNB-2E-w8R" firstAttribute="leading" secondItem="Mit-0C-8X6" secondAttribute="trailing" id="g5d-qD-nNl"/>
+                            <constraint firstItem="dVo-yp-nPS" firstAttribute="top" secondItem="XNB-2E-w8R" secondAttribute="bottom" id="gX9-t3-OqB"/>
+                            <constraint firstAttribute="trailing" secondItem="dVo-yp-nPS" secondAttribute="trailing" id="geR-yD-mh9"/>
+                            <constraint firstItem="dVo-yp-nPS" firstAttribute="width" secondItem="B2N-sL-UHO" secondAttribute="width" id="gi0-PW-309"/>
+                            <constraint firstItem="dVo-yp-nPS" firstAttribute="height" secondItem="XNB-2E-w8R" secondAttribute="height" id="inE-0H-9bT"/>
+                            <constraint firstItem="XNB-2E-w8R" firstAttribute="leading" secondItem="Mit-0C-8X6" secondAttribute="trailing" id="izn-eO-BfW"/>
+                            <constraint firstItem="dVo-yp-nPS" firstAttribute="width" secondItem="B2N-sL-UHO" secondAttribute="width" id="jGY-O5-ei8"/>
+                            <constraint firstItem="Mit-0C-8X6" firstAttribute="height" secondItem="B2N-sL-UHO" secondAttribute="height" id="jXv-3Q-1Fo"/>
+                            <constraint firstItem="XNB-2E-w8R" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="llv-Xs-N6x"/>
+                            <constraint firstAttribute="trailing" secondItem="dVo-yp-nPS" secondAttribute="trailing" id="mtr-F0-6D9"/>
+                            <constraint firstItem="Mit-0C-8X6" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="nwx-y9-4Tz"/>
+                            <constraint firstItem="Mit-0C-8X6" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="pS9-AB-lqT"/>
+                            <constraint firstItem="Mit-0C-8X6" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="rep-yB-tGu"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="B2N-sL-UHO" secondAttribute="bottom" id="sz4-FH-JIf"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="dVo-yp-nPS" secondAttribute="bottom" id="vQW-Su-H7B"/>
+                            <constraint firstAttribute="trailing" secondItem="XNB-2E-w8R" secondAttribute="trailing" id="x7c-FS-hEb"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="5Fp-3O-TRn"/>
+                                <exclude reference="GWK-BN-9kC"/>
+                                <exclude reference="KON-KH-oqx"/>
+                                <exclude reference="SUT-na-HSP"/>
+                                <exclude reference="VSI-6a-tNt"/>
+                                <exclude reference="pS9-AB-lqT"/>
+                                <exclude reference="4ah-TZ-XaK"/>
+                                <exclude reference="6xg-jx-79Y"/>
+                                <exclude reference="EXK-bG-IgS"/>
+                                <exclude reference="XEo-de-OFV"/>
+                                <exclude reference="ZVR-Fe-Fhj"/>
+                                <exclude reference="g5d-qD-nNl"/>
+                                <exclude reference="AXJ-t1-jle"/>
+                                <exclude reference="chG-Pz-5hw"/>
+                                <exclude reference="CaM-GR-6kD"/>
+                                <exclude reference="Dea-PU-0HE"/>
+                                <exclude reference="Zis-h0-i69"/>
+                                <exclude reference="ZnR-70-nHE"/>
+                                <exclude reference="gX9-t3-OqB"/>
+                                <exclude reference="geR-yD-mh9"/>
+                                <exclude reference="gi0-PW-309"/>
+                                <exclude reference="inE-0H-9bT"/>
+                                <exclude reference="HVh-sF-HMs"/>
+                                <exclude reference="vQW-Su-H7B"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <navigationItem key="navigationItem" title="Women Surrealists" id="dLp-Eg-tIu"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1754" y="642"/>
+        </scene>
+        <!--Remedios Varo-->
+        <scene sceneID="Oi0-mS-N8m">
+            <objects>
+                <viewController title="Remedios Varo" id="JIa-Kp-swM" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LA2-LS-hR4"/>
+                        <viewControllerLayoutGuide type="bottom" id="az4-VW-TnT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="M3W-cM-e2t">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RemediosVaro2" translatesAutoresizingMaskIntoConstraints="NO" id="Ge3-tu-SwR">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="600" id="6X3-Ud-35a"/>
+                                    <constraint firstAttribute="width" secondItem="Ge3-tu-SwR" secondAttribute="height" multiplier="75:67" id="Fbf-Vc-Az8"/>
+                                    <constraint firstAttribute="width" constant="600" id="RIx-Hi-2vv"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="6X3-Ud-35a"/>
+                                        <exclude reference="Fbf-Vc-Az8"/>
+                                        <exclude reference="RIx-Hi-2vv"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8xk-67-1yj">
+                                <rect key="frame" x="314" y="72" width="270" height="230"/>
+                                <color key="backgroundColor" white="0.5" alpha="0.33000000000000002" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="270" id="10M-tY-6M0"/>
+                                    <constraint firstAttribute="height" constant="230" id="DF3-Uq-naC"/>
+                                </constraints>
+                                <mutableString key="text">(1908-1963) Born in Girona, Spain, Remedios Varo Uranga studies art in Madrid before seeking refuge in Paris during the Spanish Civil War. She married the French surrealist poet Benjamin Péret and joined the art group Logicophobiste.
+
+Before the Nazi occupation of France, she fled again to Mexico, where she met Frida Kahlo and Diego Revera. She remained in Latin America for the rest of her life.
+
+Her art focuses on themes of nature, science, and the mystic connection between them. She was influenced by renaissance art, especially the works of Hieronymus Bosch, and used formal construction and a narrative structure.
+
+Her mature paintings, fraught with arguably feminist meaning, are predominantly from the last few years of her life. The paintings of androgynous characters that share Varo’s facial features, mythical creatures, the misty swirls and eerie distortions of perspective are characteristic of Varo’s unique brand of surrealism.
+
+[El gato helecho (The Fern Cat), 1957]</mutableString>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Ge3-tu-SwR" secondAttribute="trailing" id="Bbb-bw-B0q"/>
+                            <constraint firstItem="8xk-67-1yj" firstAttribute="trailing" secondItem="M3W-cM-e2t" secondAttribute="trailingMargin" id="OMS-gU-MnW"/>
+                            <constraint firstItem="8xk-67-1yj" firstAttribute="top" secondItem="LA2-LS-hR4" secondAttribute="bottom" constant="8" symbolic="YES" id="bbE-hW-xyJ"/>
+                            <constraint firstItem="Ge3-tu-SwR" firstAttribute="leading" secondItem="M3W-cM-e2t" secondAttribute="leading" id="k4I-NZ-SM3"/>
+                            <constraint firstItem="Ge3-tu-SwR" firstAttribute="top" secondItem="LA2-LS-hR4" secondAttribute="bottom" id="kcm-Ng-ad3"/>
+                            <constraint firstItem="az4-VW-TnT" firstAttribute="top" secondItem="Ge3-tu-SwR" secondAttribute="bottom" id="nT8-ZB-aWR"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iSP-QY-2Mq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2579" y="-212"/>
+        </scene>
+        <!--Remedios Varo-->
+        <scene sceneID="voN-Wq-Bhe">
+            <objects>
+                <viewController title="Remedios Varo" id="t30-GY-YUo" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="czo-6s-f1R"/>
+                        <viewControllerLayoutGuide type="bottom" id="oWz-F5-cgV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kMW-Fh-ew6">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="KaySage2" translatesAutoresizingMaskIntoConstraints="NO" id="8YG-l1-6x8">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="600" id="x05-v5-9N6"/>
+                                    <constraint firstAttribute="width" constant="600" id="xwj-Jb-2XB"/>
+                                    <constraint firstAttribute="width" secondItem="8YG-l1-6x8" secondAttribute="height" multiplier="75:67" id="zmK-mT-ULW"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="x05-v5-9N6"/>
+                                        <exclude reference="zmK-mT-ULW"/>
+                                        <exclude reference="xwj-Jb-2XB"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P2I-VM-BBU">
+                                <rect key="frame" x="314" y="72" width="270" height="230"/>
+                                <color key="backgroundColor" white="0.5" alpha="0.33000000000000002" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="270" id="P7b-sh-MjO"/>
+                                    <constraint firstAttribute="height" constant="230" id="pVk-ia-Xai"/>
+                                </constraints>
+                                <mutableString key="text">(1898-1963) Katherine Linn Sage was born in Albany, New York, to wealthy timber magnate and state senator, Henry Sage, and her mother Anne Sage. Anne soon left Henry and moved to Europe, taking Kay with her.
+
+Kay's home became Rapallo, Itally, but she spent much time exploring Europe, including Paris, with her mother. She was fluent in English, Italian, and French. She returned to the states at the beginning of World War I, attending schools in Virginia and Washington, D.C. After the war, her and her mother returned to Rome where she continued her studies.
+
+In 1933 Sage moved to Paris, to "become an artist," wherein she encountered the surrealist art movement. She embraced the new style and began painting in earnest. Art historian Whitney Chadwick said that Sage’s paintings were “imbued with an aura of purified form and a sense of motionlessness and impending doom found nowhere else in Surrealism.” There she met her future husband, and possibly her greatest influence, fellow surrealist Yves Tanguy.
+
+(1898-1963) Katherine Linn Sage was born in Albany, New York, to wealthy timber magnate and state senator, Henry Sage, and her mother Anne Sage. Anne soon left Henry and moved to Europe, taking Kay with her.
+
+Kay's home became Rapallo, Itally, but she spent much time exploring Europe, including Paris, with her mother. She was fluent in English, Italian, and French. She returned to the states at the beginning of World War I, attending schools in Virginia and Washington, D.C. After the war, her and her mother returned to Rome where she continued her studies.
+
+In 1933 Sage moved to Paris, to "become an artist," wherein she encountered the surrealist art movement. She embraced the new style and began painting in earnest. Art historian Whitney Chadwick said that Sage’s paintings were “imbued with an aura of purified form and a sense of motionlessness and impending doom found nowhere else in Surrealism.” There she met her future husband, and possibly her greatest influence, fellow surrealist Yves Tanguy.
+
+At the outbreak of World War II, Sage returned again to New York, where she used her wealth and influence to raise awareness of surrealism in the United States, and where she finally established herself as a successful, and widely praised, artist. Sage did the bulk of her mature work between 1940, when she married Tanguy, and 1955, when he died suddenly from a cerebral hemorrhage.
+
+[I Saw Three Cities, 1944]</mutableString>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="P2I-VM-BBU" firstAttribute="top" secondItem="czo-6s-f1R" secondAttribute="bottom" constant="8" symbolic="YES" id="GAV-5x-I6h"/>
+                            <constraint firstItem="P2I-VM-BBU" firstAttribute="trailing" secondItem="kMW-Fh-ew6" secondAttribute="trailingMargin" id="H78-QQ-w2M"/>
+                            <constraint firstItem="8YG-l1-6x8" firstAttribute="top" secondItem="czo-6s-f1R" secondAttribute="bottom" id="JLa-gt-wyE"/>
+                            <constraint firstItem="8YG-l1-6x8" firstAttribute="leading" secondItem="kMW-Fh-ew6" secondAttribute="leading" id="eZU-ry-MRc"/>
+                            <constraint firstAttribute="trailing" secondItem="8YG-l1-6x8" secondAttribute="trailing" id="f4c-eO-Oax"/>
+                            <constraint firstItem="oWz-F5-cgV" firstAttribute="top" secondItem="8YG-l1-6x8" secondAttribute="bottom" id="nXr-Kk-JkQ"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Oyq-wk-Rpn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2579" y="444"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="VKF-l2-5dX">
+            <objects>
+                <navigationController id="LRj-ox-ZcO" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Rl9-75-DJj">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="m6J-Gu-wQD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="stm-gp-RfX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1081" y="642"/>
+        </scene>
+        <!--Remedios Varo-->
+        <scene sceneID="naQ-rX-BdG">
+            <objects>
+                <viewController title="Remedios Varo" id="Qo1-tW-GxN" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gCi-RX-NPK"/>
+                        <viewControllerLayoutGuide type="bottom" id="2NJ-ZQ-0U2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kJk-to-Sl2">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="FridaKahlo2" translatesAutoresizingMaskIntoConstraints="NO" id="R33-U6-Viy">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="600" id="9l2-9L-pKK"/>
+                                    <constraint firstAttribute="width" secondItem="R33-U6-Viy" secondAttribute="height" multiplier="75:67" id="Iv9-TJ-HwH"/>
+                                    <constraint firstAttribute="height" constant="600" id="aXw-Ag-8tt"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="aXw-Ag-8tt"/>
+                                        <exclude reference="Iv9-TJ-HwH"/>
+                                        <exclude reference="9l2-9L-pKK"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="n5V-Ms-401">
+                                <rect key="frame" x="314" y="72" width="270" height="230"/>
+                                <color key="backgroundColor" white="0.5" alpha="0.33000000000000002" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="230" id="9gJ-kb-h8q"/>
+                                    <constraint firstAttribute="width" constant="270" id="uqx-zV-lTt"/>
+                                </constraints>
+                                <mutableString key="text">(1907-1954) Born Magdalena Carmen Frieda Kahlo y Caldrón, Frida Kahlo lived almost her entire life in the La Casa Azul (The Blue House), in what was then the outskirts of Mexico City. Her father, Guillermo Kahlo (born Carl Wilhelm Kahlo), was a German immigrant, and photographer by trade. Her mother, Matilde Calderón y Gonzalez, was of Amerindian (an indigenous South American people) and Spanish ancestry. Guillermo married Matilde after the death of his first wife, and they had four daughters, Frida being the third.
+
+Frida suffered physical misery and pain most of her life. She contracted polio at age six, leaving her with a withered leg, which she disguised with long colorful skirts. At eighteen, she was involved in a horrific trolly car accident that resulted in extensive damage to her spinal column, pelvis, and internal organs. Constant pain and the dozens of surgeries she endured were reoccurring themes in her artwork.
+
+Frida admired the famous Mexican painter, Diego Rivera, and exchanged correspondence with him for years before she finally met him. When she did, they developed an intimate relationship, and eventually married in 1929, over the objections of her parents. Their marriage was troubled and contentious. They often has separate living arrangements, and both engaged in numerous extra-marital affairs. They were divorced in 1939, but remarried again in 1940. Through her marriage to Diego, she was introduced to New York galleries, where she gained her own celebrity.
+
+Frida died at the age of 47. She was in constant pain her final years, often bed ridden for months at a time, complications of her injuries and subsequent treatments. Yet, she did not allow her condition to diminish her passion for art. She had a special easel built so she could paint in bed, and attended one of her openings by having four strong men carry her, on her bed, into the gallery.
+
+Kahlo embraced indigenous Mexican culture, often combining elements of religious tradition, dramatic symbolism, bright colors, and primitive style in her artwork. She was often the subject of her own art, and produced many self portraits during her career. Her early works was strongly influenced by Diego, but always incorporated her own symbolism and imagery.
+
+[The Suicide of Dorothy Hale, 1938]</mutableString>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="R33-U6-Viy" firstAttribute="top" secondItem="gCi-RX-NPK" secondAttribute="bottom" id="U6H-ys-DLf"/>
+                            <constraint firstItem="n5V-Ms-401" firstAttribute="top" secondItem="gCi-RX-NPK" secondAttribute="bottom" constant="8" symbolic="YES" id="WnU-OI-zUd"/>
+                            <constraint firstItem="n5V-Ms-401" firstAttribute="trailing" secondItem="kJk-to-Sl2" secondAttribute="trailingMargin" id="ouE-w5-XCS"/>
+                            <constraint firstAttribute="trailing" secondItem="R33-U6-Viy" secondAttribute="trailing" id="pTj-RF-Q44"/>
+                            <constraint firstItem="2NJ-ZQ-0U2" firstAttribute="top" secondItem="R33-U6-Viy" secondAttribute="bottom" id="rfR-cp-k53"/>
+                            <constraint firstItem="R33-U6-Viy" firstAttribute="leading" secondItem="kJk-to-Sl2" secondAttribute="leading" id="zyL-ZI-pGh"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3DM-lc-w5u" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2579" y="1103"/>
+        </scene>
+        <!--Remedios Varo-->
+        <scene sceneID="BsI-l0-Zt5">
+            <objects>
+                <viewController title="Remedios Varo" id="Y9O-cV-OUI" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="QeN-78-T3B"/>
+                        <viewControllerLayoutGuide type="bottom" id="rdV-I4-TpI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2ak-YO-HZk">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="LeonoraCarrington2" translatesAutoresizingMaskIntoConstraints="NO" id="j4f-Ck-FGK">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="j4f-Ck-FGK" secondAttribute="height" multiplier="75:67" id="UHH-d7-f8x"/>
+                                    <constraint firstAttribute="height" constant="600" id="ddM-lg-8iw"/>
+                                    <constraint firstAttribute="width" constant="600" id="e8M-e0-EFL"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="ddM-lg-8iw"/>
+                                        <exclude reference="UHH-d7-f8x"/>
+                                        <exclude reference="e8M-e0-EFL"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ww3-sl-pi8">
+                                <rect key="frame" x="314" y="72" width="270" height="230"/>
+                                <color key="backgroundColor" white="0.5" alpha="0.33000000000000002" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="230" id="1of-LS-9Qh"/>
+                                    <constraint firstAttribute="width" constant="270" id="8qN-Z7-BzE"/>
+                                </constraints>
+                                <mutableString key="text">(1917-2011) Leonora Carrington was born in Clayton Green, Lancashire, England to a wealthy textile manufacturer. Her rebellious nature resulted in expulsion from two schools. Her early education was undertaken by governesses, tutors, and nuns. In her teens, her family sent her to Florence, Italy, where she attended Mrs. Penrose's Academy of Art. Returning to England, she studied at the Chelsea School of Art and later the Ozenfant Academy in London.
+
+Leonora saw her first surrealist painting at the age of ten and later met many Surrealists, including Paul Éluard. While her father discouraged her career in art, her mother, Maureeen Moorhead, encouraged it, giving her a copy of Herbert Read's book "Surrealism" (1936).
+
+Carrington was attracted to Max Ernst's work long before she met him in 1937. The two bonded in Paris, whereupon Ernst separated from his wife. The next year they moved to Saint Martin d'Archèche, in the south of France. They spent years there, collaborating on paintings, sculptures, and decorative arts.
+
+At the outbreak of World War II, Ernst was repeatedly arrested, but eventually escaped to America. Carrington was devastated, and fled to Spain where she had a nervous breakdown and was institutionalized. With the help of friends, she was smuggled to Lisbon, where she sought asylum at the Mexican Embassy. To obtain passage to Mexico, she agreed to a marriage of convince to the Mexican Ambasidor, Renato Leduc, a friend of Picasso. Except for a brief period in New York, she lived and worked in Mexico the rest of her life.
+
+Her first major exhibition was in 1957 in New York, where she became an instant celebrity, being the only professional, woman, English painter of note. She authored several books. Her artwork was often exhibited in conjunction with fellow surrealists Remedios Varo and Kati Horna.
+
+Leonora had a fascination for horses, which she incorporated in both her artwork and her writings. She also developed her own symbology, using an image of a candlestick, for example, to refer to her family. She was one of the last surviving surrealist artists, and set a Christie's auction record for the highest price ($713,000US) paid for work by a living surrealist painter.
+
+[Daravault, 1950]</mutableString>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ww3-sl-pi8" firstAttribute="trailing" secondItem="2ak-YO-HZk" secondAttribute="trailingMargin" id="13T-7r-r0t"/>
+                            <constraint firstItem="rdV-I4-TpI" firstAttribute="top" secondItem="j4f-Ck-FGK" secondAttribute="bottom" id="AMz-0n-yN5"/>
+                            <constraint firstItem="Ww3-sl-pi8" firstAttribute="top" secondItem="QeN-78-T3B" secondAttribute="bottom" constant="8" symbolic="YES" id="Mck-tR-pz8"/>
+                            <constraint firstAttribute="trailing" secondItem="j4f-Ck-FGK" secondAttribute="trailing" id="Oll-6x-Ou2"/>
+                            <constraint firstItem="j4f-Ck-FGK" firstAttribute="leading" secondItem="2ak-YO-HZk" secondAttribute="leading" id="OrL-mV-EN7"/>
+                            <constraint firstItem="j4f-Ck-FGK" firstAttribute="top" secondItem="QeN-78-T3B" secondAttribute="bottom" id="PLA-HK-yf1"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gib-cD-D3o" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2579" y="1770"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="FridaKahlo1" width="160" height="256"/>
+        <image name="FridaKahlo2" width="1000" height="1187"/>
+        <image name="KaySage1" width="160" height="256"/>
+        <image name="KaySage2" width="787" height="1024"/>
+        <image name="LeonoraCarrington1" width="160" height="256"/>
+        <image name="LeonoraCarrington2" width="770" height="941"/>
+        <image name="RemediosVaro1" width="160" height="256"/>
+        <image name="RemediosVaro2" width="1152" height="1536"/>
+    </resources>
 </document>
